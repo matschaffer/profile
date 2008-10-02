@@ -1,0 +1,13 @@
+PLATFORM=`uname`
+
+load_conf() {
+	for CONF in "$1/"*.conf; do
+	  source "${CONF}"
+	done
+}
+
+load_conf "${HOME}/.profile.d"
+
+if [ -e "${HOME}/.profile.d/${PLATFORM}" ]; then
+	load_conf "${HOME}/.profile.d/${PLATFORM}"
+fi
