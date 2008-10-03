@@ -1,0 +1,21 @@
+h1. My Bash Profile
+
+This is the profile that I'm now using across a number of machines that I administer.  Most of the tricks I use are fairly general and could be reused by anyone.
+
+h2. Features
+
+* Tab completion for ssh hosts on OS X.
+* Tab completion for rake tasks
+* Git aliases
+* "Safe" edit.  Makes a backup copy of a file before editing
+* Basic java set up on solaris and Darwin
+* Maven memory settings
+* 'profile_push' function for pushing these files out to other servers
+* Reactive prompt.  Includes date and exit code of last command if error condition.
+* Auto setup of .foward file on Linux and Solaris
+
+h2. Planned features
+
+* Tab completion for ssh hosts in Solaris
+* Single-command for SSH key distribution and profile distribution
+* Auto setup of .irbrc, .vimrc, .ssh/config, .pythonrc.py, etc...
