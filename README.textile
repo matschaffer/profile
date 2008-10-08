@@ -5,7 +5,7 @@ This is the profile that I'm now using across a number of machines that I admini
 h2. Features
 
 * Tab completion for ssh hosts on OS X.
-* Tab completion for rake tasks
+* Tab completion for rake and ant tasks
 * Git aliases
 * "Safe" edit.  Makes a backup copy of a file before editing
 * Basic java set up on solaris and Darwin
