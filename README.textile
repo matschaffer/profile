@@ -8,7 +8,7 @@ h2. Usage
 # Go home
 cd ~
 
-# clone mine or your own fork
+# Clone mine or your own fork
 git clone git://github.com/schapht/profile.git .profile.d
 
 # All *.conf files are loaded alphabetically, so this will retain your original settings
@@ -17,7 +17,7 @@ mv .profile .profile.d/z_myoldsettings.conf
 # .profile.d/init kicks off the whole thing
 ln -s .profile.d/init .profile
 
-# Make sure you don't have any .bash_profile or .bash_rc hanging out which might override .profile
+# Make sure you don't have any .bash_profile or .bashrc hanging out which might override .profile
 # and reload your profile
 source .profile
 </pre>
