@@ -1,14 +1,14 @@
 profile_push() {
-	ssh $1 "rm -rf .profile.d"
-	scp -r "${HOME}/.profile.d" $1:.profile.d
-	ssh $1 "rm -rf .profile .bashrc .profile.d/.git; ln -s .profile.d/init .profile"
+  ssh $1 "rm -rf .profile.d"
+  scp -r "${HOME}/.profile.d" $1:.profile.d
+  ssh $1 "rm -rf .profile .bashrc .profile.d/.git; ln -s .profile.d/init .profile"
 }
 
 load_conf() {
-	for CONF in "$1/"*.conf; do
-	  # echo "Loading ${CONF}..." # for debugging
-	  source "${CONF}"
-	done
+  for CONF in "$1/"*.conf; do
+    # echo "Loading ${CONF}..." # for debugging
+    source "${CONF}"
+  done
 }
 
 BASE_PATH="${HOME}/.profile.d"
@@ -17,8 +17,8 @@ PLATFORM_PATH="${BASE_PATH}/`uname`"
 source "${BASE_PATH}/colors"
 if [ -e "${PLATFORM_PATH}" ]; then
   source "${PLATFORM_PATH}/init"
-	load_conf "${BASE_PATH}"
-	load_conf "${PLATFORM_PATH}"
+  load_conf "${BASE_PATH}"
+  load_conf "${PLATFORM_PATH}"
 else
-	load_conf "${BASE_PATH}"
+  load_conf "${BASE_PATH}"
 fi
