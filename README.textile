@@ -2,6 +2,33 @@ h1. My Bash Profile
 
 This is the profile that I'm now using across a number of machines that I administer.  Most of the tricks I use are fairly general and could be reused by anyone.
 
+h2. Usage
+
+<pre>
+# Go home
+cd ~
+
+# clone mine or your own fork
+git clone git://github.com/schapht/profile.git .profile.d
+
+# All *.conf files are loaded alphabetically, so this will retain your original settings
+mv .profile .profile.d/z_myoldsettings.conf
+
+# .profile.d/init kicks off the whole thing
+ln -s .profile.d/init .profile
+
+# Make sure you don't have any .bash_profile or .bash_rc hanging out which might override .profile
+# and reload your profile
+source .profile
+</pre>
+
+From here you can now put any .profile.d/<notextile>*</notextile>.conf file, or put it in a folder for your `uname` (Darwin, Linux, SunOS are already there).  The load order is.
+
+# .profile.d/init
+# .profile.d/`uname`/init
+# .profile.d/<notextile>*</notextile>.conf
+# .profile.d/`uname`/<notextile>*</notextile>.conf
+
 h2. Features
 
 * Tab completion for ssh hosts on OS X.
@@ -13,6 +40,7 @@ h2. Features
 * 'profile_push' function for pushing these files out to other servers
 * Reactive prompt.  Includes date and exit code of last command if error condition.
 * Auto setup of .foward file on Linux and Solaris
+* Integration with CDArgs (http://bit.ly/ZHvBF)
 
 h2. Planned features
 
