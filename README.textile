@@ -9,7 +9,7 @@ h2. Usage
 cd ~
 
 # Clone mine or your own fork
-git clone git://github.com/schapht/profile.git .profile.d
+git clone git://github.com/matschaffer/profile.git .profile.d
 
 # All *.conf files are loaded alphabetically, so this will retain your original settings
 mv .profile .profile.d/z_myoldsettings.conf
