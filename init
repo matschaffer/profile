@@ -22,3 +22,5 @@ if [ -e "${PLATFORM_PATH}" ]; then
 else
   load_conf "${BASE_PATH}"
 fi
+
+bind "set completion-ignore-case on"
