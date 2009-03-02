@@ -6,7 +6,6 @@ profile_push() {
 
 load_conf() {
   for CONF in "$1/"*.conf; do
-    # echo "Loading ${CONF}..." # for debugging
     source "${CONF}"
   done
 }
