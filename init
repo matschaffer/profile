@@ -1,7 +1,5 @@
 profile_push() {
-  ssh $1 "rm -rf .profile.d"
-  scp -r "${HOME}/.profile.d" $1:.profile.d
-  ssh $1 "rm -rf .profile .bashrc .profile.d/.git; ln -s .profile.d/init .profile"
+  tar --exclude=".git" -cf - -C "${HOME}" .profile.d | ssh $1 "rm -rf .profile.d .profile .bashrc; ln -s .profile.d/init .profile; tar xf - -C .profile.d;"
 }
 
 load_conf() {
