@@ -2,6 +2,10 @@ h1. My Bash Profile
 
 This is the profile that I'm now using across a number of machines that I administer.  Most of the tricks I use are fairly general and could be reused by anyone.
 
+h2. What's it look like?
+
+!http://cloud.github.com/downloads/matschaffer/profile/diagram.png(Feature Diagram)!
+
 h2. Usage
 
 <pre>
