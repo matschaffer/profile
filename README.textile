@@ -42,9 +42,9 @@ h2. Features
 * Basic java set up on solaris and Darwin
 * Maven memory settings
 * 'profile_push' function for pushing these files out to other servers
-* Reactive prompt.  Includes date and exit code of last command if error condition.
+* Reactive prompt - includes date and exit code of last command and git branch.
 * Auto setup of .foward file on Linux and Solaris
-* Integration with CDArgs (http://bit.ly/ZHvBF)
+* Integration with "CDArgs":http://www.skamphausen.de/cgi-bin/ska/CDargs
 
 h2. Planned features
 
