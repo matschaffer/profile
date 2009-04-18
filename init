@@ -15,11 +15,5 @@ load_conf() {
 BASE_PATH="${HOME}/.profile.d"
 PLATFORM_PATH="${BASE_PATH}/`uname`"
 
-source "${BASE_PATH}/colors"
-if [ -e "${PLATFORM_PATH}" ]; then
-  source "${PLATFORM_PATH}/init"
-  load_conf "${BASE_PATH}"
-  load_conf "${PLATFORM_PATH}"
-else
-  load_conf "${BASE_PATH}"
-fi
+load_conf "${BASE_PATH}"
+[ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
