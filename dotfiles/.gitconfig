@@ -1,0 +1,32 @@
+[user]
+	name = Mat Schaffer
+	email = mat.schaffer@gmail.com
+[alias]
+	co = checkout
+	st = status
+	pu = push
+	pl = pull
+[web]
+	browser = open
+[gui]
+	fontdiff = -family Monaco -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow 
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[github]
+	user = matschaffer
+	token = be13b7d9191d854c7185ad0a5ccd68d6

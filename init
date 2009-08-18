@@ -12,8 +12,8 @@ load_conf() {
   done
 }
 
-BASE_PATH="${HOME}/.profile.d"
-PLATFORM_PATH="${BASE_PATH}/`uname`"
+PROFILE_PATH="${HOME}/.profile.d"
+PLATFORM_PATH="${PROFILE_PATH}/`uname`"
 
-load_conf "${BASE_PATH}"
+load_conf "${PROFILE_PATH}"
 [ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
