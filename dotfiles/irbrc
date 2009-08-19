@@ -17,6 +17,12 @@ class Time
   end
 end
 
+class String
+  def full_uri_escape
+    URI.escape(self, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+  end
+end
+
 if ENV['RAILS_ENV']
   def Object.method_added(method)
     return super(method) unless method == :helper
