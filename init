@@ -1,11 +1,3 @@
-profile_push() {
-  tar cf - --exclude=".git" -C "${HOME}" .profile.d | \
-    ssh $1 "rm -rf .profile.d .profile .bashrc;
-            mkdir .profile.d;
-            tar xf -;
-            ln -s .profile.d/init .profile"
-}
-
 load_conf() {
   for CONF in "$1/"*.conf; do
     source "${CONF}"
