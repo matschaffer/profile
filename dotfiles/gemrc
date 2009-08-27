@@ -1,0 +1,15 @@
+--- 
+gempath: 
+- /Users/schapht/.gem/ruby/1.8
+- /Library/Ruby/Gems/1.8
+- /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8
+:benchmark: false
+:verbose: true
+:update_sources: true
+gemcutter_key: 74b55c8c76a7202339ec96b97df6f18d
+:sources: 
+- http://gemcutter.org
+- http://gems.rubyforge.org/
+:backtrace: false
+:bulk_threshold: 1000
+user_install: true
