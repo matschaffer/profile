@@ -3,6 +3,7 @@
 	email = mat.schaffer@gmail.com
 [alias]
 	co = checkout
+	ci = commit
 	st = status
 	pu = push
 	pl = pull
