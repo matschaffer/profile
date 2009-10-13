@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>PATH</key>
-  <string>/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/Users/schapht/.gem/ruby/1.8/bin:/usr/local/jruby/bin:/usr/local/rhino</string>
+  <string>/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/Users/schapht/.gem/ruby/1.8/bin:/usr/local/jruby/bin:/usr/local/rhino:/usr/local/clojure</string>
 </dict>
 </plist>
