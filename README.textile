@@ -35,6 +35,8 @@ From here you can now put any .profile.d/<notextile>*</notextile>.conf file, or 
 
 h2. Features
 
+* Tab Completion for Maven2
+* Tab completion for Subversion
 * Tab completion for ssh hosts on OS X.
 * Tab completion for rake and ant tasks
 * Git aliases
