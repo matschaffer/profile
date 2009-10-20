@@ -35,14 +35,15 @@ From here you can now put any .profile.d/<notextile>*</notextile>.conf file, or 
 
 h2. Features
 
+* Reactive prompt - includes date and exit code of last command and git branch.
 * Tab completion for ssh hosts on OS X.
-* Tab completion for rake and ant tasks
+* Tab completion for rake, maven and ant tasks
 * Git aliases
-* "Safe" edit.  Makes a backup copy of a file before editing
+* 'safeedit' function that makes a timestamped backup copy of a file before editing
 * Basic java set up on solaris and Darwin
 * Maven memory settings
 * 'profile_push' function for pushing these files out to other servers
-* Reactive prompt - includes date and exit code of last command and git branch.
+* 'link_dotfiles' command that will create symlinks for all the files listed in the dotfiles directory
 * Auto setup of .foward file on Linux and Solaris
 * Integration with "CDArgs":http://www.skamphausen.de/cgi-bin/ska/CDargs
 
@@ -50,4 +51,3 @@ h2. Planned features
 
 * Tab completion for ssh hosts in Solaris
 * Single-command for SSH key distribution and profile distribution
-* Auto setup of .irbrc, .vimrc, .ssh/config, .pythonrc.py, etc...
