@@ -36,8 +36,9 @@ From here you can now put any .profile.d/<notextile>*</notextile>.conf file, or 
 h2. Features
 
 * Reactive prompt - includes date and exit code of last command and git branch.
+* Tab Completion for Git and Subversion
+* Tab completion for Rake, Maven 2 and Ant
 * Tab completion for ssh hosts on OS X.
-* Tab completion for rake, maven and ant tasks
 * Git aliases
 * 'safeedit' function that makes a timestamped backup copy of a file before editing
 * Basic java set up on solaris and Darwin
