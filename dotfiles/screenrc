@@ -1,1 +1,17 @@
+escape ^]a
+
+bell_msg '^GBell in window %n'
+
+width 80
+height 24
+
 shell -/bin/bash
+
+screen -t editor
+screen -t shell
+screen -t other
+select 0
+
+startup_message off
+hardstatus alwayslastline
+hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}'
