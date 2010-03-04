@@ -4,6 +4,7 @@ bell_msg '^GBell in window %n'
 
 width 80
 height 24
+defscrollback 1000000
 
 shell -/bin/bash
 
