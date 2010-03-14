@@ -11,6 +11,7 @@ shell -/bin/bash
 screen -t editor
 screen -t shell
 screen -t other
+select 1
 select 0
 
 startup_message off
