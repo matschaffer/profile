@@ -11,7 +11,7 @@
 [web]
 	browser = open
 [gui]
-	fontdiff = -family Monaco -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
 [color]
 	branch = auto
 	diff = auto
