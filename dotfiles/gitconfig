@@ -7,6 +7,7 @@
 	st = status
 	pu = push
 	pl = pull
+  pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
 [web]
 	browser = open
 [gui]
