@@ -9,8 +9,3 @@ PLATFORM_PATH="${PROFILE_PATH}/`uname`"
 
 load_conf "${PROFILE_PATH}"
 [ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
-
-# MUST BE AT THE END!!!
-# RVM (Ruby version manager) 
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then source "$HOME/.rvm/scripts/rvm"; fi
-rvm use ruby-1.8.7 > /dev/null
