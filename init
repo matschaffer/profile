@@ -9,8 +9,7 @@ PROFILE_PATH="${HOME}/.profile.d"
 PLATFORM=`uname`
 
 load_conf "${PROFILE_PATH}"
-load_conf "${PROFILE_PATH}/${PLATFORM}"
-
 load_conf "${PROFILE_PATH}/${USER}"
+load_conf "${PROFILE_PATH}/${PLATFORM}"
 load_conf "${PROFILE_PATH}/${USER}/${PLATFORM}"
 
