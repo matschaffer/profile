@@ -1,11 +1,16 @@
 load_conf() {
-  for CONF in "$1/"*.conf; do
-    source "${CONF}"
+  for conf in "$1"/*.conf; do
+    [ -e "${conf}" ] && source "${conf}"
   done
+  return 0
 }
 
 PROFILE_PATH="${HOME}/.profile.d"
-PLATFORM_PATH="${PROFILE_PATH}/`uname`"
+PLATFORM=`uname`
 
 load_conf "${PROFILE_PATH}"
-[ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
+load_conf "${PROFILE_PATH}/${PLATFORM}"
+
+load_conf "${PROFILE_PATH}/${USER}"
+load_conf "${PROFILE_PATH}/${USER}/${PLATFORM}"
+
