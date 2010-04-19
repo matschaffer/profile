@@ -26,12 +26,13 @@ ln -s .profile.d/init .profile
 source .profile
 </pre>
 
-From here you can now put any .profile.d/<notextile>*</notextile>.conf file, or put it in a folder for your `uname` (Darwin, Linux, SunOS are already there).  The load order is.
+From here you can now put any @*.conf@ in @~/.profile.d@ and it'll get loaded in alphabetical order. You can also put conf files in @~/.profile.d/`uname`@ to get platform-specific configuration or @~/.profile.d/$USER@ to get user-specific configuration. The load order (defined in the @init@ file) is:
 
 # .profile.d/init
-# .profile.d/`uname`/init
 # .profile.d/<notextile>*</notextile>.conf
+# .profile.d/$USER/<notextile>*</notextile>.conf
 # .profile.d/`uname`/<notextile>*</notextile>.conf
+# .profile.d/$USER/`uname`/<notextile>*</notextile>.conf
 
 h2. Features
 
@@ -47,8 +48,9 @@ h2. Features
 * 'link_dotfiles' command that will create symlinks for all the files listed in the dotfiles directory
 * Auto setup of .foward file on Linux and Solaris
 * Integration with "CDArgs":http://www.skamphausen.de/cgi-bin/ska/CDargs
+* "Autojump":http://wiki.github.com/joelthelion/autojump/
 
 h2. Planned features
 
-* Tab completion for ssh hosts in Solaris
+* Tab completion for ssh hosts in Solaris/Ubuntu
 * Single-command for SSH key distribution and profile distribution
