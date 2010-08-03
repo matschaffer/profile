@@ -32,3 +32,5 @@
 [github]
 	user = matschaffer
 	token = be13b7d9191d854c7185ad0a5ccd68d6
+[core]
+	excludesfile = /Users/mat/.gitignore
