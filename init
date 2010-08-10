@@ -1,15 +1,26 @@
 load_conf() {
+  local conf
   for conf in "$1"/*.conf; do
-    [ -e "${conf}" ] && source "${conf}"
+    [ -d "${conf}" ] && load_conf "${conf}"
+    [ -f "${conf}" ] && source "${conf}"
   done
   return 0
 }
 
-PROFILE_PATH="${HOME}/.profile.d"
+conf_support() {
+  cd `dirname ${BASH_ARGV[0]}`
+  echo "`pwd`/$1"
+  cd - > /dev/null
+}
+
+PROFILE_INIT=`readlink ${BASH_ARGV[0]}`
+PROFILE_CORE=`dirname ${PROFILE_INIT}`
+
 PLATFORM=`uname`
 
-load_conf "${PROFILE_PATH}"
-load_conf "${PROFILE_PATH}/${USER}"
-load_conf "${PROFILE_PATH}/${PLATFORM}"
-load_conf "${PROFILE_PATH}/${USER}/${PLATFORM}"
+load_conf "${PROFILE_CORE}"
+load_conf "${PROFILE_CORE}/${PLATFORM}"
+
+load_conf "${PROFILE_CORE}/.."
+load_conf "${PROFILE_CORE}/../${PLATFORM}"
 
