@@ -2,7 +2,7 @@ escape ^]a
 
 bell_msg '^GBell in window %n'
 
-defscrollback 1000000
+defscrollback 100000
 
 shell -bash
 
