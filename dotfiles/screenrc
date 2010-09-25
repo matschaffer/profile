@@ -2,14 +2,13 @@ escape ^]a
 
 bell_msg '^GBell in window %n'
 
-width 80
-height 24
-defscrollback 1000000
+defscrollback 50000
 
 shell -/bin/bash
 
 screen -t editor
 screen -t shell
+screen -t server
 screen -t other
 select 1
 select 0
