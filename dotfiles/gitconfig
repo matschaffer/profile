@@ -1,6 +1,6 @@
 [user]
-	name = Mat Schaffer
-	email = mat.schaffer@gmail.com
+	name = Trotter Cashion
+	email = cashion@gmail.com
 [alias]
 	co = checkout
 	ci = commit
@@ -29,6 +29,3 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[github]
-	user = matschaffer
-	token = be13b7d9191d854c7185ad0a5ccd68d6
