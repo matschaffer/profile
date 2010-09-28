@@ -6,9 +6,7 @@ This is the profile that I'm now using across a number of machines that I admini
 What's it look like?
 --------------------
 
-(Note, this is an old screenshot, needs updating)
-
-![Feature Diagram](http://cloud.github.com/downloads/matschaffer/profile/diagram.png)
+![Feature Diagram](http://img.skitch.com/20100928-ng3tdm6b54wn4g62x2syaaef5w.jpg)
 
 Installation
 ------------
@@ -39,8 +37,9 @@ This list is not guaranteed to be comprehensive, but here are some of the major 
 * Maven memory settings
 * 'profile_push' function for pushing these files out to other servers
 * Auto setup of .foward file on Linux and Solaris
-* Integration with "CDArgs":http://www.skamphausen.de/cgi-bin/ska/CDargs
-* "Autojump":http://wiki.github.com/joelthelion/autojump/
+* Integration with [CDArgs](http://www.skamphausen.de/cgi-bin/ska/CDargs)
+* Integration with [Autojump](http://github.com/joelthelion/autojump/)
+* Integration with [RVM](http://rvm.beginrescueend.com/)
 
 Planned features
 ----------------
