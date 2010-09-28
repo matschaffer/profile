@@ -4,12 +4,11 @@ PROFILE_PATH=".profile.d"
 cd "$HOME"
 mkdir $PROFILE_PATH
 git clone $PROFILE_REPO $PROFILE_PATH/core
-echo
 
 if [ -f .profile ]; then
   echo
-  echo "Moving current .profile to $PROFILE_PATH/dotprofile.conf"
-  mv .profile $PROFILE_PATH/dotprofile.conf
+  echo "Moving current .profile to $PROFILE_PATH/userprofile.conf"
+  mv .profile $PROFILE_PATH/userprofile.conf
 fi
 
 ln -s .profile.d/core/init .profile
