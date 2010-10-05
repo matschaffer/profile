@@ -13,14 +13,24 @@ conf_support() {
   cd - > /dev/null
 }
 
+is_home_dir() {
+  cd "$1"
+  full_path=`pwd`
+  cd - > /dev/null
+  [ "$full_path" = "$HOME" ]
+}
+
 PROFILE_INIT=`readlink ${BASH_ARGV[0]}`
 PROFILE_CORE=`dirname ${PROFILE_INIT}`
+PROFILE_CUSTOM="${PROFILE_CORE}/.."
 
 PLATFORM=`uname`
 
 load_conf "${PROFILE_CORE}"
 load_conf "${PROFILE_CORE}/${PLATFORM}"
 
-load_conf "${PROFILE_CORE}/.."
-load_conf "${PROFILE_CORE}/../${PLATFORM}"
-
+if ! is_home_dir "${PROFILE_CUSTOM}"; then
+  echo "loading the parent"
+  load_conf "${PROFILE_CUSTOM}"
+  load_conf "${PROFILE_CUSTOM}/${PLATFORM}"
+fi
