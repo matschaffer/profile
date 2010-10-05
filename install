@@ -1,0 +1,24 @@
+PROFILE_REPO="http://github.com/matschaffer/profile.git"
+PROFILE_PATH=".profile.d"
+
+cd "$HOME"
+mkdir $PROFILE_PATH
+git clone $PROFILE_REPO $PROFILE_PATH/core
+
+if [ -f .profile ]; then
+  echo
+  echo "Moving current .profile to $PROFILE_PATH/userprofile.conf"
+  mv .profile $PROFILE_PATH/userprofile.conf
+fi
+
+ln -s .profile.d/core/init .profile
+
+for BLOCKING_RC in .bashrc .login .bashprofile; do
+  if [ -f $BLOCKING_RC ]; then
+    echo
+    echo "Warning: Found existing $BLOCKING_RC which may cause .profile not to load."
+    echo "You may want to move this file into a $PROFILE_PATH/$BLOCKING_RC.conf file."
+  fi
+done
+
+echo

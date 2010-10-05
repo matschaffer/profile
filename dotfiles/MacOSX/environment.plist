@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>PATH</key>
-  <string>/usr/local/ec2-api-tools/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/Users/schapht/.gem/ruby/1.8/bin:/usr/local/jruby/bin:/usr/local/rhino:/usr/local/clojure:/usr/local/mysql/bin:/usr/local/go/bin:/Applications/AdobeAir/bin</string>
-</dict>
-</plist>
