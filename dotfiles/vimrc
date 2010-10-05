@@ -24,3 +24,7 @@ set incsearch  " incremental search, search as you type
 " Status Line *****************************************************************
 set showcmd
 set ruler " Show ruler
+
+" Backups *********************************************************************
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
