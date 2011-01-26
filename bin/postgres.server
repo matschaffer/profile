@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require File.expand_path("../server_runner", __FILE__)
+
+class PostgresServer < ServerRunner
+  def server_cmd(command)
+    case command
+    when "start"
+      "pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+    when "stop"
+      "pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+    end
+  end
+end
+
+PostgresServer.run

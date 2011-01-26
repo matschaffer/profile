@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require File.expand_path("../server_runner", __FILE__)
+
+class MongoServer < ServerRunner
+  def server_cmd(command)
+    "mongod #{command}" +
+     " --config /usr/local/Cellar/mongodb/1.6.3-x86_64/mongod.conf" + 
+     " --fork" +
+     " --logpath /var/log/mongod/mongod.log"
+  end
+end
+
+MongoServer.run

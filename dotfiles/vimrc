@@ -28,3 +28,6 @@ set ruler " Show ruler
 " Backups *********************************************************************
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+" Better File Opening *********************************************************
+set wildmode=list:longest,full
