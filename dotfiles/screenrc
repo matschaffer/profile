@@ -1,18 +1,18 @@
-escape ^]a
+escape ^\a
 
 bell_msg '^GBell in window %n'
 
-defscrollback 50000
+defscrollback 10000
 
-shell -/bin/bash
+shell -bash
 
-screen -t editor
-screen -t shell
-screen -t server
-screen -t other
-select 1
 select 0
 
 startup_message off
-hardstatus alwayslastline
-hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}'
+#hardstatus alwayslastline
+#hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}'
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+
+hardstatus string "screen (%n: %t)"
+caption string '%{= kG}[%{G}%H%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}][%{B}%m/%d %{W}%c%{g}]'
+caption always
