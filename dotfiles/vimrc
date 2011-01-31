@@ -1,3 +1,6 @@
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 syntax on
 filetype plugin indent on
@@ -25,9 +28,28 @@ set incsearch  " incremental search, search as you type
 set showcmd
 set ruler " Show ruler
 
-" Backups *********************************************************************
+"au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
+"
+autocmd BufNewFile,BufRead *.cls set filetype=java
+autocmd BufNewFile,BufRead *.trigger set filetype=java
+autocmd BufNewFile,BufRead *.page.erb let b:eruby_subtype='html'|set filetype=eruby
+autocmd BufNewFile,BufRead *.cls.erb let b:eruby_subtype='java' |set filetype=eruby
+autocmd BufNewFile,BufRead *.object.erb let b:eruby_subtype='xml' |set filetype=eruby
+
+" show trailing whitespace ***************************************************
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set list
+
+if has("gui_running")
+  set guioptions=egmrt
+  set guifont=Meslo\ LG\ M\ DZ:h12
+endif
+
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Better File Opening *********************************************************
-set wildmode=list:longest,full
+set t_Co=256
+colorscheme wuye
+
+set ttymouse=xterm2
+set mouse=a

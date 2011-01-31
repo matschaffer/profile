@@ -1,13 +1,10 @@
-[user]
-	name = Trotter Cashion
-	email = cashion@gmail.com
 [alias]
 	co = checkout
 	ci = commit
 	st = status
 	pu = push
 	pl = pull
-  pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
 [web]
 	browser = open
 [gui]
@@ -29,3 +26,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[core]
+	excludesfile = /Users/mat/.gitignore
