@@ -1,4 +1,4 @@
-escape ^]a
+escape ^|a
 
 bell_msg '^GBell in window %n'
 
