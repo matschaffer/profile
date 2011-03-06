@@ -29,3 +29,6 @@
 	untracked = cyan
 [core]
 	excludesfile = ~/.gitignore
+[user]
+	name = Trotter Cashion
+	email = cashion@gmail.com
