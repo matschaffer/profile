@@ -1,9 +1,15 @@
 set nocompatible
 syntax on
-filetype plugin indent on
 
 set backspace=indent,eol,start
 set number " Show line numbers
+
+" Pathogen ********************************************************************
+
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
 
 " Folding *********************************************************************
 
@@ -31,3 +37,41 @@ set directory=~/.vim/backup
 
 " Better File Opening *********************************************************
 set wildmode=list:longest,full
+
+" Use \ as the leader *********************************************************
+let mapleader = "\\"
+nmap <silent> <leader>s :set spell!<CR>
+
+" Put the cursor at the beginning of the edit after . macro *******************
+nmap . .`[
+
+" Show syntax highlighting groups for word under cursor ***********************
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+" Show whitespace *************************************************************
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set list
+
+" Ruby helpers ****************************************************************
+" Need to move this section to ruby.vim
+
+iabbrev rdebug require 'ruby-debug'; debugger; 1
+
+" Fix up grep.vim
+let Grep_Xargs_Options='-0'
+
+" Ctags ****************************************************************
+" augroup vimctags
+"   autocmd!
+"   autocmd BufWritePost *.rb,*.erl silent!ctags -R &
+" augroup END
+
+" Highlight long rows **************************************************
+highlight OverLength ctermbg=Magenta ctermfg=white guibg=#592929
+match OverLength /\%81v./
