@@ -4,6 +4,7 @@
 	st = status
 	pu = push
 	pl = pull
+  gap = add -p
   pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
 [web]
 	browser = open
@@ -23,8 +24,8 @@
 	old = red bold
 	new = green bold
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = red
 	untracked = cyan
 [core]
-	excludesfile = /Users/mat/.gitignore
+	excludesfile = ~/.gitignore
