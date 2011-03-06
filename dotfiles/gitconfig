@@ -1,6 +1,3 @@
-[user]
-	name = Trotter Cashion
-	email = cashion@gmail.com
 [alias]
 	co = checkout
 	ci = commit

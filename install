@@ -1,4 +1,4 @@
-PROFILE_REPO="http://github.com/matschaffer/profile.git"
+PROFILE_REPO="https://github.com/matschaffer/profile.git"
 PROFILE_PATH=".profile.d"
 
 cd "$HOME"

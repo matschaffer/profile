@@ -25,12 +25,16 @@ PROFILE_CORE=`dirname ${PROFILE_INIT}`
 PROFILE_CUSTOM="${PROFILE_CORE}/.."
 
 PLATFORM=`uname`
+ORIGINAL_PWD=`pwd`
+
+cd "${HOME}"
 
 load_conf "${PROFILE_CORE}"
 load_conf "${PROFILE_CORE}/${PLATFORM}"
 
 if ! is_home_dir "${PROFILE_CUSTOM}"; then
-  echo "loading the parent"
   load_conf "${PROFILE_CUSTOM}"
   load_conf "${PROFILE_CUSTOM}/${PLATFORM}"
 fi
+
+cd "${ORIGINAL_PWD}"
