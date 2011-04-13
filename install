@@ -1,7 +1,7 @@
 PROFILE_REPO="https://github.com/matschaffer/profile.git"
 PROFILE_PATH=".profile.d"
 
-cd "$HOME"
+cd $HOME
 mkdir $PROFILE_PATH
 git clone $PROFILE_REPO $PROFILE_PATH/core
 
@@ -12,6 +12,9 @@ if [ -f .profile ]; then
 fi
 
 ln -s .profile.d/core/init .profile
+
+cd $PROFILE_PATH
+ln -s core/available/*.conf .
 
 for BLOCKING_RC in .bashrc .login .bashprofile; do
   if [ -f $BLOCKING_RC ]; then
