@@ -11,7 +11,7 @@ What's it look like?
 Installation
 ------------
 
-    curl -s https://github.com/matschaffer/profile/raw/master/install | bash
+    curl -s https://raw.github.com/matschaffer/profile/master/install | bash
 
 From here you can now put any `*.conf` in `~/.profile.d` and it'll get loaded in alphabetical order. You can also make directories that end in `.conf` which profile will then load all the `.conf` files in that directory in order.
 
