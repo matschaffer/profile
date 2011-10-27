@@ -38,3 +38,5 @@ if ! is_home_dir "${PROFILE_CUSTOM}"; then
 fi
 
 cd "${ORIGINAL_PWD}"
+
+PATH=$PATH:~/code/awck.git/
