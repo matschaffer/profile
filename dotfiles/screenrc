@@ -17,6 +17,9 @@ caption always
 # Meta-y to put copy buffer into OS X buffer
 bind y eval "writebuf $HOME/.screen.pbcopy" "exec /usr/bin/osascript -e 'tell application \"System Events\"' -e 'set the clipboard to (read posix file \"/$HOME/.screen.pbcopy\" as text)' -e 'end tell'"
 
+# Meta-l to clear scroll buffer
+bind l eval "scrollback 0" "clear" "scrollback 10000"
+
 # #terminfo and termcap for nice 256 color terminal
 # # allow bold colors - necessary for some reason
 # attrcolor b ".I"
