@@ -1,31 +1,29 @@
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	pu = push
-	pl = pull
+  co = checkout
+  ci = commit
+  st = status
+  pu = push
+  pl = pull
   gap = add -p
   pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
 [web]
-	browser = open
+  browser = open
 [gui]
-	fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow 
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 [color "status"]
-	added = green
-	changed = red
-	untracked = cyan
-[core]
-	excludesfile = ~/.gitignore
+  added = green
+  changed = red
+  untracked = cyan
