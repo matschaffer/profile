@@ -6,6 +6,9 @@
   pl = pull
   gap = add -p
   pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  ll = log --stat --abbrev-commit
+  d = diff --color-words
 [web]
   browser = open
 [gui]
