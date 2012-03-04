@@ -1,6 +1,13 @@
 PROFILE_REPO="https://github.com/matschaffer/profile.git"
 PROFILE_PATH=".profile.d"
 
+if ! type -p git; then
+  echo "'git' command not found. Please install git first."
+  echo
+  echo "I recommend starting with https://github.com/kennethreitz/osx-gcc-installer then using Homebrew (http://mxcl.github.com/homebrew/) to install git. Feel free to contact me via email or GTalk at mat@schaffer.me"
+  exit 1
+fi
+
 cd "$HOME"
 mkdir $PROFILE_PATH
 git clone $PROFILE_REPO $PROFILE_PATH/core
